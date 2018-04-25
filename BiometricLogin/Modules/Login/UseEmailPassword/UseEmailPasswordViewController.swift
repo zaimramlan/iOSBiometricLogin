@@ -57,6 +57,7 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
     super.viewDidLoad()
     loginButton.hide(.withoutAnimation)
     activityIndicator.hide(.withoutAnimation)
+    setupResultLabel()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -64,14 +65,46 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
     loginButton.show(.withAnimation)
   }
 
-  // MARK: Labels
+  // MARK: Result Label
+  
+  @IBOutlet var resultLabel: UILabel!
+  @IBOutlet var resultLabelToSafeAreaTopConstraint: NSLayoutConstraint!
+  func setupResultLabel() {
+    resultLabel.sizeToFit()
+    resultLabel.alpha = 0
+    resultLabelToSafeAreaTopConstraint.constant = 0 - resultLabel.frame.height
+  }
   
   func hideResultLabel() {
-    
+    UIView.animate(withDuration: 0.5) {
+      self.resultLabelToSafeAreaTopConstraint.constant = 0 - self.resultLabel.frame.height
+      self.resultLabel.alpha = 0
+      self.view.layoutIfNeeded()
+    }
   }
   
   func showResultLabel() {
+    UIView.animate(withDuration: 0.5) {
+      self.resultLabel.alpha = 1.0
+      self.resultLabelToSafeAreaTopConstraint.constant = self.resultLabel.frame.height
+      self.view.layoutIfNeeded()
+    }
     
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+      self.hideResultLabel()
+    }
+  }
+  
+  func showSuccessResultLabel(_ text: String? = "Success ✅") {
+    resultLabel.text = text
+    resultLabel.sizeToFit()
+    showResultLabel()
+  }
+  
+  func showFailureResultLabel(_ text: String? = "Oops, textfields can't be empty ❌") {
+    resultLabel.text = text
+    resultLabel.sizeToFit()
+    showResultLabel()
   }
 
   // MARK: Use Case - UseEmailPassword
@@ -89,5 +122,6 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
   func displayUseEmailPasswordResult(with viewModel: UseEmailPasswordModels.UseEmailPassword.ViewModel) {
     activityIndicator.hide(.withAnimation)
     loginButton.show(.withAnimation)
+    showFailureResultLabel()
   }
 }

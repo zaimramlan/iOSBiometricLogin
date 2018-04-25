@@ -19,33 +19,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EzY-5A-ivO">
-                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <rect key="frame" x="20" y="71" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVa-kz-wNd">
-                                <rect key="frame" x="20" y="85" width="335" height="30"/>
+                                <rect key="frame" x="20" y="116" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P/S: This is just a fallback page to login with email &amp; password. Any combination would work! 😉" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18V-Rc-s75">
-                                <rect key="frame" x="20" y="125" width="335" height="29"/>
+                                <rect key="frame" x="20" y="156" width="335" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2py-sT-pV3">
-                                <rect key="frame" x="168" y="179" width="38" height="30"/>
+                                <rect key="frame" x="168" y="210" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonClicked:" destination="krq-Wz-j0c" eventType="touchUpInside" id="jpK-Ty-Ppn"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3xD-6Z-D2I">
-                                <rect key="frame" x="177" y="184" width="20" height="20"/>
+                                <rect key="frame" x="177" y="215" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success ✅" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13R-vx-GJ6">
+                                <rect key="frame" x="20" y="30" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -57,10 +63,14 @@
                             <constraint firstItem="18V-Rc-s75" firstAttribute="top" secondItem="zVa-kz-wNd" secondAttribute="bottom" constant="10" id="Qmn-v9-poM"/>
                             <constraint firstItem="EzY-5A-ivO" firstAttribute="leading" secondItem="cnn-q7-EeP" secondAttribute="leading" constant="20" id="Spr-v2-Nf1"/>
                             <constraint firstItem="cnn-q7-EeP" firstAttribute="trailing" secondItem="18V-Rc-s75" secondAttribute="trailing" constant="20" id="UPZ-Gl-tVU"/>
+                            <constraint firstItem="13R-vx-GJ6" firstAttribute="centerX" secondItem="0sh-hB-K3e" secondAttribute="centerX" id="aGO-mQ-oJU"/>
                             <constraint firstItem="3xD-6Z-D2I" firstAttribute="centerY" secondItem="2py-sT-pV3" secondAttribute="centerY" id="aqn-dp-Inm"/>
+                            <constraint firstItem="13R-vx-GJ6" firstAttribute="top" secondItem="cnn-q7-EeP" secondAttribute="top" constant="10" id="c7e-bg-7GH"/>
                             <constraint firstItem="cnn-q7-EeP" firstAttribute="trailing" secondItem="zVa-kz-wNd" secondAttribute="trailing" constant="20" id="czZ-61-dmt"/>
+                            <constraint firstItem="13R-vx-GJ6" firstAttribute="leading" secondItem="cnn-q7-EeP" secondAttribute="leading" constant="20" id="hX5-m2-cBC"/>
+                            <constraint firstItem="cnn-q7-EeP" firstAttribute="trailing" secondItem="13R-vx-GJ6" secondAttribute="trailing" constant="20" id="nXr-21-0V2"/>
                             <constraint firstItem="cnn-q7-EeP" firstAttribute="trailing" secondItem="EzY-5A-ivO" secondAttribute="trailing" constant="20" id="oaT-ni-25Q"/>
-                            <constraint firstItem="EzY-5A-ivO" firstAttribute="top" secondItem="cnn-q7-EeP" secondAttribute="top" constant="20" id="tdB-uU-qdU"/>
+                            <constraint firstItem="EzY-5A-ivO" firstAttribute="top" secondItem="13R-vx-GJ6" secondAttribute="bottom" constant="20" id="pNx-2B-GDV"/>
                             <constraint firstItem="EzY-5A-ivO" firstAttribute="centerX" secondItem="0sh-hB-K3e" secondAttribute="centerX" id="vPF-AN-YaV"/>
                             <constraint firstItem="zVa-kz-wNd" firstAttribute="leading" secondItem="cnn-q7-EeP" secondAttribute="leading" constant="20" id="wBR-iZ-9u7"/>
                         </constraints>
@@ -69,6 +79,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="3xD-6Z-D2I" id="o8N-Cl-85o"/>
                         <outlet property="loginButton" destination="2py-sT-pV3" id="1eA-1A-fMt"/>
+                        <outlet property="resultLabel" destination="13R-vx-GJ6" id="ZOQ-Ss-3C3"/>
+                        <outlet property="resultLabelToSafeAreaTopConstraint" destination="c7e-bg-7GH" id="dX7-lS-ztS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRV-2A-Yby" userLabel="First Responder" sceneMemberID="firstResponder"/>
