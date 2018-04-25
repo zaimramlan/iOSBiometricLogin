@@ -20,14 +20,22 @@ protocol UseEmailPasswordDataStore {
 }
 
 class UseEmailPasswordInteractor: UseEmailPasswordBusinessLogic, UseEmailPasswordDataStore {
-  var worker: UseEmailPasswordWorker?
+  var worker: UseEmailPasswordWorker? = UseEmailPasswordWorker()
   var presenter: UseEmailPasswordPresentationLogic?
   
   // MARK: Use Case - UseEmailPassword
   
   func UseEmailPassword(with request: UseEmailPasswordModels.UseEmailPassword.Request) {
+    worker?.validate(email: request.email)
+    worker?.validate(password: request.password)
+    
+    var containsErrors = true
+    if let email = worker?.emailModel, let password = worker?.passwordModel {
+      containsErrors = email.isEmpty || password.isEmpty
+    }
+
     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-      let response = UseEmailPasswordModels.UseEmailPassword.Response()
+      let response = UseEmailPasswordModels.UseEmailPassword.Response(containsErrors: containsErrors)
       self.presenter?.presentUseEmailPasswordResult(with: response)
     }
   }

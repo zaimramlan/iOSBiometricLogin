@@ -22,7 +22,7 @@ class UseEmailPasswordPresenter: UseEmailPasswordPresentationLogic {
   // MARK: Use Case - UseEmailPassword
   
   func presentUseEmailPasswordResult(with response: UseEmailPasswordModels.UseEmailPassword.Response) {
-    let viewModel = UseEmailPasswordModels.UseEmailPassword.ViewModel()
+    let viewModel = UseEmailPasswordModels.UseEmailPassword.ViewModel(containsErrors: response.containsErrors)
     viewController?.displayUseEmailPasswordResult(with: viewModel)
   }
 }

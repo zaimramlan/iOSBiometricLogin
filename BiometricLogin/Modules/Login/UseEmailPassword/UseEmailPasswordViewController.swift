@@ -109,19 +109,30 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
 
   // MARK: Use Case - UseEmailPassword
 
+  @IBOutlet var emailTF: UITextField!
+  @IBOutlet var passwordTF: UITextField!
   @IBOutlet var loginButton: UIButton!
   @IBOutlet var activityIndicator: UIActivityIndicatorView!
   @IBAction func loginButtonClicked(_ sender: Any) {
     loginButton.hide(.withAnimation)
     activityIndicator.show(.withAnimation)
     
-    let request = UseEmailPasswordModels.UseEmailPassword.Request()
+    let email = emailTF.text
+    let password = passwordTF.text
+    
+    let request = UseEmailPasswordModels.UseEmailPassword.Request(email: email, password: password)
     interactor?.UseEmailPassword(with: request)
   }
 
   func displayUseEmailPasswordResult(with viewModel: UseEmailPasswordModels.UseEmailPassword.ViewModel) {
     activityIndicator.hide(.withAnimation)
     loginButton.show(.withAnimation)
-    showFailureResultLabel()
+    
+    if viewModel.containsErrors {
+      showFailureResultLabel()
+    }
+    else {
+      showSuccessResultLabel()
+    }
   }
 }

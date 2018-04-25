@@ -30,21 +30,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P/S: This is just a fallback page to login with email &amp; password. Any combination would work! 😉" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18V-Rc-s75">
-                                <rect key="frame" x="20" y="156" width="335" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P/S: This is just a fallback page to login with email &amp; password. As long as textfields are not empty, it would work! 😉" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18V-Rc-s75">
+                                <rect key="frame" x="20" y="156" width="335" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2py-sT-pV3">
-                                <rect key="frame" x="168" y="210" width="38" height="30"/>
+                                <rect key="frame" x="168" y="224" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonClicked:" destination="krq-Wz-j0c" eventType="touchUpInside" id="jpK-Ty-Ppn"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3xD-6Z-D2I">
-                                <rect key="frame" x="177" y="215" width="20" height="20"/>
+                                <rect key="frame" x="177" y="229" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success ✅" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13R-vx-GJ6">
                                 <rect key="frame" x="20" y="30" width="335" height="21"/>
@@ -78,7 +78,9 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="3xD-6Z-D2I" id="o8N-Cl-85o"/>
+                        <outlet property="emailTF" destination="EzY-5A-ivO" id="TKB-US-nzt"/>
                         <outlet property="loginButton" destination="2py-sT-pV3" id="1eA-1A-fMt"/>
+                        <outlet property="passwordTF" destination="zVa-kz-wNd" id="cMK-q8-fJG"/>
                         <outlet property="resultLabel" destination="13R-vx-GJ6" id="ZOQ-Ss-3C3"/>
                         <outlet property="resultLabelToSafeAreaTopConstraint" destination="c7e-bg-7GH" id="dX7-lS-ztS"/>
                     </connections>

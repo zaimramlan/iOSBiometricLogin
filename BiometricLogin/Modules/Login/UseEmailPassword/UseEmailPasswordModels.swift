@@ -13,25 +13,31 @@
 import UIKit
 
 enum UseEmailPasswordModels {
-
-  // MARK: Enums
-  
-  enum PresentationType {
-    case withAnimation, withoutAnimation
-  }
   
   // MARK: Use Cases
   
   enum UseEmailPassword {
     struct Request {
+      var email: String?
+      var password: String?
     }
 
     struct Response {
-      var containsErrors: Bool?
+      var containsErrors: Bool
     }
 
     struct ViewModel {
-      var containsErrors: Bool?
+      var containsErrors: Bool
     }
+  }
+  
+  // MARK: View Models
+  
+  struct Email {
+    var isEmpty: Bool
+  }
+  
+  struct Password {
+    var isEmpty: Bool
   }
 }

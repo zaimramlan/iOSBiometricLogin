@@ -13,10 +13,27 @@
 import UIKit
 
 class UseEmailPasswordWorker {
-  func UseEmailPassword(completionHandler: @escaping (Bool, String?) -> Void) {
-    let isSuccessful = true
-    let errorMessage: String? = "Some service error message."
-
-    completionHandler(isSuccessful, errorMessage)
+  
+  // MARK: Properties
+  
+  var emailModel: UseEmailPasswordModels.Email?
+  var passwordModel: UseEmailPasswordModels.Password?
+  
+  // MARK: Validations
+  
+  func validate(email: String?) {
+    emailModel = UseEmailPasswordModels.Email(isEmpty: true)
+    
+    if let string = email, !string.isEmpty {
+      emailModel?.isEmpty = false
+    }
+  }
+  
+  func validate(password: String?) {
+    passwordModel = UseEmailPasswordModels.Password(isEmpty: true)
+    
+    if let string = password, !string.isEmpty {
+      passwordModel?.isEmpty = false
+    }
   }
 }
