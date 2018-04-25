@@ -13,24 +13,16 @@
 import UIKit
 
 protocol UseEmailPasswordPresentationLogic {
-  func presentFetchFromDataStoreResult(with response: UseEmailPasswordModels.FetchFromDataStore.Response)
   func presentUseEmailPasswordResult(with response: UseEmailPasswordModels.UseEmailPassword.Response)
 }
 
 class UseEmailPasswordPresenter: UseEmailPasswordPresentationLogic {
   weak var viewController: UseEmailPasswordDisplayLogic?
-
-  // MARK: Fetch Data From DataStore
-  
-  func presentFetchFromDataStoreResult(with response: UseEmailPasswordModels.FetchFromDataStore.Response) {
-    let viewModel = UseEmailPasswordModels.FetchFromDataStore.ViewModel(userAttribute: response.userAttribute)
-    viewController?.displayFetchFromDataStoreResult(with: viewModel)
-  }  
   
   // MARK: Use Case - UseEmailPassword
   
   func presentUseEmailPasswordResult(with response: UseEmailPasswordModels.UseEmailPassword.Response) {
-    let viewModel = UseEmailPasswordModels.UseEmailPassword.ViewModel(containsErrors: response.containsErrors, genericErrorMessage: response.genericErrorMessage, variablePassed: response.variablePassed)
+    let viewModel = UseEmailPasswordModels.UseEmailPassword.ViewModel()
     viewController?.displayUseEmailPasswordResult(with: viewModel)
   }
 }

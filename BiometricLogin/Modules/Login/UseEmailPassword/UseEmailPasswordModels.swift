@@ -14,44 +14,24 @@ import UIKit
 
 enum UseEmailPasswordModels {
 
-  // MARK: Data Store Fetch
+  // MARK: Enums
   
-  enum FetchFromDataStore {
-    struct Request {
-    }
-    
-    struct Response {
-      var userAttribute: String
-    }
-    
-    struct ViewModel {
-      var userAttribute: String
-    }
+  enum PresentationType {
+    case withAnimation, withoutAnimation
   }
   
   // MARK: Use Cases
   
   enum UseEmailPassword {
     struct Request {
-      var variableToPass: String?
     }
 
     struct Response {
-      var containsErrors: Bool
-      var genericErrorMessage: String?
-      var variablePassed: VariablePassed?
+      var containsErrors: Bool?
     }
 
     struct ViewModel {
-      var containsErrors: Bool
-      var genericErrorMessage: String?
-      var variablePassed: VariablePassed?
+      var containsErrors: Bool?
     }
-  }
-
-  // MARK: View Models
-
-  struct VariablePassed {
-    var errorMessage: String?
   }
 }

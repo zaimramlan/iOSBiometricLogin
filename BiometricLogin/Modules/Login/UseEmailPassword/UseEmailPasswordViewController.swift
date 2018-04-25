@@ -13,7 +13,6 @@
 import UIKit
 
 protocol UseEmailPasswordDisplayLogic: class {
-  func displayFetchFromDataStoreResult(with viewModel: UseEmailPasswordModels.FetchFromDataStore.ViewModel)  
   func displayUseEmailPasswordResult(with viewModel: UseEmailPasswordModels.UseEmailPassword.ViewModel)
 }
 
@@ -52,103 +51,43 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
     router.dataStore = interactor
   }
   
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    // if let scene = segue.identifier {
-    //   let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-    //   if let router = router, router.responds(to: selector) {
-    //     router.perform(selector, with: segue)
-    //   }
-    // }
-  }
-  
   // MARK: View Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupTexts()
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    setupFetchFromDataStore()
-  }
-    
-  // MARK: Texts
-
-  var someLabel = UILabel()
-  func setupTexts() {
-
-    // MARK: Font Setting
-
-    let fontName = "A font name"
-    let fontSize = CGFloat(14.0)
-    var font     = UIFont(name: fontName, size: fontSize)
-
-    if font == nil { font = UIFont.systemFont(ofSize: fontSize) }
-
-    // MARK: Texts
-
-    someLabel.text = "Some Text"
-
-    // MARK: Button
-
-    //let text = Localiser.sharedInstance.string(for: "Module.Sub Module.Element")
-    let text = ""
-    someButton.setTitle(text, for: .normal)
-    someButton.titleLabel?.font = font
-  }
-
-  // MARK: Fetch Data From DataStore
-
-  @IBOutlet var userAttributeLabel: UILabel!
-  func setupFetchFromDataStore() {
-    let request = UseEmailPasswordModels.FetchFromDataStore.Request()
-    interactor?.fetchFromDataStore(with: request)
+    loginButton.hide(.withoutAnimation)
+    activityIndicator.hide(.withoutAnimation)
   }
   
-  func displayFetchFromDataStoreResult(with viewModel: UseEmailPasswordModels.FetchFromDataStore.ViewModel) {
-    someLabel.text = viewModel.userAttribute
-  }  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    loginButton.show(.withAnimation)
+  }
+
+  // MARK: Labels
+  
+  func hideResultLabel() {
+    
+  }
+  
+  func showResultLabel() {
+    
+  }
 
   // MARK: Use Case - UseEmailPassword
 
-  var someButton = UIButton()
-  @IBAction func someButtonClicked(_ sender: Any) {
-    let request = UseEmailPasswordModels.UseEmailPassword.Request(variableToPass: someLabel.text)
+  @IBOutlet var loginButton: UIButton!
+  @IBOutlet var activityIndicator: UIActivityIndicatorView!
+  @IBAction func loginButtonClicked(_ sender: Any) {
+    loginButton.hide(.withAnimation)
+    activityIndicator.show(.withAnimation)
+    
+    let request = UseEmailPasswordModels.UseEmailPassword.Request()
     interactor?.UseEmailPassword(with: request)
   }
 
   func displayUseEmailPasswordResult(with viewModel: UseEmailPasswordModels.UseEmailPassword.ViewModel) {
-    if viewModel.containsErrors {
-
-      // 1. Handle UIElement changes based on user input
-
-      // for handling errors that is caused
-      // by invalid user input
-      print(viewModel.variablePassed?.errorMessage ?? "")
-
-      // 2. Handle Generic Error Message
-
-      // for handling errors that is caused
-      // by service call from worker
-      if viewModel.genericErrorMessage != nil {
-        
-        // handle generic error
-        print(viewModel.genericErrorMessage ?? "")
-      }
-    }
-    else {
-
-      // 1. Handle UIElement changes based on user input
-
-      // set UIElements back to normal state
-
-      // 2. Route to the screen after
-
-      // route to next screen
-      router?.routeToSomewhere()
-    }
+    activityIndicator.hide(.withAnimation)
+    loginButton.show(.withAnimation)
   }
 }

@@ -13,7 +13,6 @@
 import UIKit
 
 protocol UseEmailPasswordRoutingLogic {
-  func routeToSomewhere()
 }
 
 protocol UseEmailPasswordDataPassing {
@@ -25,27 +24,4 @@ class UseEmailPasswordRouter: NSObject, UseEmailPasswordRoutingLogic, UseEmailPa
   var dataStore: UseEmailPasswordDataStore?
   
   // MARK: Routing
-
-  func routeToSomewhere() {
-    routeToSomewhere(segue: nil)
-  }
-  
-  func routeToSomewhere(segue: UIStoryboardSegue?) {
-    if let segue = segue {
-      let destinationVC = segue.destination as! UseEmailPasswordViewController
-      var destinationDS = destinationVC.router!.dataStore!
-      passDataTo(&destinationDS, from: dataStore!)
-    } else {
-      let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SomewhereViewController") as! UseEmailPasswordViewController
-      var destinationDS = destinationVC.router!.dataStore!
-      passDataTo(&destinationDS, from: dataStore!)
-      viewController?.navigationController?.pushViewController(destinationVC, animated: true)
-    }
-  }
-  
-  // MARK: Data Passing
-  
-  func passDataTo(_ destinationDS: inout UseEmailPasswordDataStore, from sourceDS: UseEmailPasswordDataStore) {
-    destinationDS.attribute = sourceDS.attribute
-  }
 }

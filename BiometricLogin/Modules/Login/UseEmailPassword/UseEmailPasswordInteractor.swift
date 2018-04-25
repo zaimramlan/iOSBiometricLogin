@@ -13,62 +13,22 @@
 import UIKit
 
 protocol UseEmailPasswordBusinessLogic {
-  func fetchFromDataStore(with request: UseEmailPasswordModels.FetchFromDataStore.Request)
   func UseEmailPassword(with request: UseEmailPasswordModels.UseEmailPassword.Request)
 }
 
 protocol UseEmailPasswordDataStore {
-  var attribute: String? { get set }
 }
 
 class UseEmailPasswordInteractor: UseEmailPasswordBusinessLogic, UseEmailPasswordDataStore {
   var worker: UseEmailPasswordWorker?
   var presenter: UseEmailPasswordPresentationLogic?
   
-  var attribute: String?
-
-  // MARK: Fetch Data From DataStore
-  
-  func fetchFromDataStore(with request: UseEmailPasswordModels.FetchFromDataStore.Request) {
-    attribute = ""
-    let response = UseEmailPasswordModels.FetchFromDataStore.Response(userAttribute: attribute!)
-    presenter?.presentFetchFromDataStoreResult(with: response)
-  }
-  
   // MARK: Use Case - UseEmailPassword
   
   func UseEmailPassword(with request: UseEmailPasswordModels.UseEmailPassword.Request) {
-
-    var isError = false
-    var variablePassed = UseEmailPasswordModels.VariablePassed()
-
-    // MARK: Empty variablePassed Check
-
-    if request.variableToPass == nil {
-      isError = true
-      variablePassed.errorMessage = "Some localised empty/nil error message string."
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+      let response = UseEmailPasswordModels.UseEmailPassword.Response()
+      self.presenter?.presentUseEmailPasswordResult(with: response)
     }
-
-    if isError {
-      let response = UseEmailPasswordModels.UseEmailPassword.Response(containsErrors: true, genericErrorMessage: nil, variablePassed: variablePassed)
-      presenter?.presentUseEmailPasswordResult(with: response)
-      return
-    }
-
-    // MARK: Execute Use Case
-
-    worker = UseEmailPasswordWorker()
-    worker?.UseEmailPassword(completionHandler: { (isSuccessful, errorMessage) in
-      if isSuccessful {
-        self.attribute = request.variableToPass!
-        
-        let response = UseEmailPasswordModels.UseEmailPassword.Response(containsErrors: false, genericErrorMessage: nil, variablePassed: variablePassed)
-        self.presenter?.presentUseEmailPasswordResult(with: response)
-      }
-      else {
-        let response = UseEmailPasswordModels.UseEmailPassword.Response(containsErrors: true, genericErrorMessage: errorMessage, variablePassed: variablePassed)
-        self.presenter?.presentUseEmailPasswordResult(with: response)
-      }
-    })
   }
 }
