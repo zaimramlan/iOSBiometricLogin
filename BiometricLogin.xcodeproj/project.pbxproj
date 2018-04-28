@@ -169,6 +169,7 @@
 		A4B1075E20908A3D00FFFB85 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A4BF7FD92093F8EA009B959A /* Constants */,
 				A4B107A02090E38D00FFFB85 /* Extensions */,
 				A4B1075F20908A4500FFFB85 /* Resources */,
 				A4149A7A20916EBB00751B72 /* Workers */,
@@ -232,6 +233,13 @@
 				A4B107A72090E5B100FFFB85 /* UILabel+Animations.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A4BF7FD92093F8EA009B959A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		A4BF9B4E209089830039F51D = {

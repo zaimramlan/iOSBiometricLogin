@@ -21,7 +21,7 @@ class BiometricsWorker {
   
   func authenticate(completion: @escaping ((_ result: AuthenticationResult, _ error: NSError?) -> Void)) {
     let context = LAContext()
-    context.localizedFallbackTitle = "Use passcode"
+    context.localizedFallbackTitle = "Use Email & Password"
     context.localizedCancelTitle = "Cancel"
     
     var capibilityError: NSError?
