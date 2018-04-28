@@ -58,11 +58,25 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
     loginButton.hide(.withoutAnimation)
     activityIndicator.hide(.withoutAnimation)
     setupResultLabel()
+    setupDismissKeyboard()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     loginButton.show(.withAnimation)
+  }
+  
+  // MARK: Keyboard Dismiss
+  
+  var viewTapGesture: UITapGestureRecognizer?
+  func setupDismissKeyboard() {
+    viewTapGesture = UITapGestureRecognizer()
+    viewTapGesture?.addTarget(self, action: #selector(dismissKeyboard))
+    if let gesture = self.viewTapGesture { self.view.addGestureRecognizer(gesture) }
+  }
+  
+  @objc func dismissKeyboard() {
+    self.view.endEditing(true)
   }
 
   // MARK: Result Label

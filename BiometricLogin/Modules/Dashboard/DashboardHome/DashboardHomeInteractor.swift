@@ -46,7 +46,7 @@ class DashboardHomeInteractor: DashboardHomeBusinessLogic, DashboardHomeDataStor
     }
     
     // retrieve value from keychain
-    var useBiometrics = false
+    var useBiometrics = true
     if let value = KeychainWrapper.standard.bool(forKey: KeychainConstants.User.UseBiometrics) {
       useBiometrics = value
     }
