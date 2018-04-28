@@ -22,13 +22,13 @@
                                 <rect key="frame" x="20" y="71" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVa-kz-wNd">
                                 <rect key="frame" x="20" y="116" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P/S: This is just a fallback page to login with email &amp; password. As long as textfields are not empty, it would work! 😉" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18V-Rc-s75">
                                 <rect key="frame" x="20" y="156" width="335" height="43"/>
@@ -37,8 +37,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2py-sT-pV3">
-                                <rect key="frame" x="168" y="224" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <rect key="frame" x="166" y="224" width="42" height="30"/>
+                                <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="loginButtonClicked:" destination="krq-Wz-j0c" eventType="touchUpInside" id="jpK-Ty-Ppn"/>
                                 </connections>
@@ -96,7 +96,21 @@
                     <view key="view" contentMode="scaleToFill" id="mPq-FS-VZi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biometrics Authentication" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-Ek-LOB">
+                                <rect key="frame" x="20" y="323" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YbB-Ek-LOB" firstAttribute="centerY" secondItem="mPq-FS-VZi" secondAttribute="centerY" id="IFG-E5-4VL"/>
+                            <constraint firstItem="YbB-Ek-LOB" firstAttribute="leading" secondItem="VGE-cq-ZPs" secondAttribute="leading" constant="20" id="VZB-Or-bZS"/>
+                            <constraint firstItem="YbB-Ek-LOB" firstAttribute="centerX" secondItem="mPq-FS-VZi" secondAttribute="centerX" id="cXM-81-09R"/>
+                            <constraint firstItem="VGE-cq-ZPs" firstAttribute="trailing" secondItem="YbB-Ek-LOB" secondAttribute="trailing" constant="20" id="uXu-iG-kaL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VGE-cq-ZPs"/>
                     </view>
                 </viewController>

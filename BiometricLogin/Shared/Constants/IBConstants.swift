@@ -11,10 +11,17 @@ import Foundation
 enum IBConstants {
   enum Storyboard {
     static let Login = "Login"
+    static let Dashboard = "Dashboard"
   }
   
   enum ViewController {
-    static let UseEmailPassword = "UseEmailPasswordVC"
-    static let UseBiometrics = "UseBiometricsVC"
+    enum Login {
+      static let UseEmailPassword = "UseEmailPasswordVC"
+      static let UseBiometrics = "UseBiometricsVC"
+    }
+    
+    enum Dashboard {
+      static let Home = "DashboardHomeVC"
+    }
   }
 }

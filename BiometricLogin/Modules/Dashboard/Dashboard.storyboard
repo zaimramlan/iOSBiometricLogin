@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xLe-DB-ZMA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zei-Ml-VyH">
+            <objects>
+                <navigationController id="xLe-DB-ZMA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nnj-9L-MR9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WMT-PL-I1g" kind="relationship" relationship="rootViewController" id="aDR-A2-ga0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDC-OX-69Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1031" y="51"/>
+        </scene>
+        <!--Dashboard Home View Controller-->
+        <scene sceneID="rRV-ge-1GG">
+            <objects>
+                <viewController storyboardIdentifier="DashboardHomeVC" id="WMT-PL-I1g" customClass="DashboardHomeViewController" customModule="BiometricLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bQN-NI-sJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Biometric Login" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Yu-kID">
+                                <rect key="frame" x="20" y="89" width="153.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynX-jF-6aH">
+                                <rect key="frame" x="306" y="84" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleUseBiometrics:" destination="WMT-PL-I1g" eventType="valueChanged" id="OO2-PY-eKi"/>
+                                </connections>
+                            </switch>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLw-bt-o7H">
+                                <rect key="frame" x="16.5" y="135" width="342" height="1"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="vdl-lp-kDI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IO-xH-FPt">
+                                <rect key="frame" x="159.5" y="151" width="55" height="30"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButtonClicked:" destination="WMT-PL-I1g" eventType="touchUpInside" id="kJG-0p-ukr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zLw-bt-o7H" firstAttribute="top" secondItem="ynX-jF-6aH" secondAttribute="bottom" constant="20" id="5wD-Dl-jNR"/>
+                            <constraint firstItem="ynX-jF-6aH" firstAttribute="centerY" secondItem="daU-Yu-kID" secondAttribute="centerY" id="ERV-ue-sNk"/>
+                            <constraint firstItem="zLw-bt-o7H" firstAttribute="leading" secondItem="E1t-Dh-ZqB" secondAttribute="leading" constant="16.5" id="Ias-uJ-dCH"/>
+                            <constraint firstItem="5IO-xH-FPt" firstAttribute="top" secondItem="zLw-bt-o7H" secondAttribute="bottom" constant="15" id="X3o-Hu-fuU"/>
+                            <constraint firstItem="5IO-xH-FPt" firstAttribute="centerX" secondItem="bQN-NI-sJ0" secondAttribute="centerX" id="cz6-i0-vmS"/>
+                            <constraint firstItem="E1t-Dh-ZqB" firstAttribute="trailing" secondItem="ynX-jF-6aH" secondAttribute="trailing" constant="20" id="eSd-Jd-Ty7"/>
+                            <constraint firstItem="ynX-jF-6aH" firstAttribute="top" secondItem="E1t-Dh-ZqB" secondAttribute="top" constant="20" id="eXF-ei-HlO"/>
+                            <constraint firstItem="daU-Yu-kID" firstAttribute="leading" secondItem="E1t-Dh-ZqB" secondAttribute="leading" constant="20" id="itm-ZE-YJy"/>
+                            <constraint firstItem="E1t-Dh-ZqB" firstAttribute="trailing" secondItem="zLw-bt-o7H" secondAttribute="trailing" constant="16.5" id="kdj-cv-66s"/>
+                            <constraint firstItem="ynX-jF-6aH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="daU-Yu-kID" secondAttribute="trailing" constant="10" id="yEy-uq-isO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E1t-Dh-ZqB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v2I-dt-hzk"/>
+                    <connections>
+                        <outlet property="toggleSwitch" destination="ynX-jF-6aH" id="MOp-DI-W2F"/>
+                        <outlet property="useBiometricsLabel" destination="daU-Yu-kID" id="QbK-Kv-XW8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDK-1Y-rvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="51"/>
+        </scene>
+    </scenes>
+</document>

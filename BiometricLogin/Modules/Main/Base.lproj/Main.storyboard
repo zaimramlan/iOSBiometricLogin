@@ -29,45 +29,26 @@
             </objects>
             <point key="canvasLocation" x="-1017" y="-52"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome User View Controller-->
         <scene sceneID="G7E-z5-4fu">
             <objects>
-                <viewController id="Z7c-8B-Q0H" sceneMemberID="viewController">
+                <viewController id="Z7c-8B-Q0H" customClass="WelcomeUserViewController" customModule="BiometricLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cUv-oy-6Fa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yif-Sq-VOd">
-                                <rect key="frame" x="111" y="318.5" width="152" height="30"/>
-                                <state key="normal" title="Use Email &amp; Password"/>
+                                <rect key="frame" x="166" y="318" width="42" height="30"/>
+                                <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="eLN-y4-z1f" kind="show" id="KCQ-3Z-9sz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a method to login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3o-2x-VOu">
-                                <rect key="frame" x="89.5" y="277.5" width="196.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-Qb-6ZD">
-                                <rect key="frame" x="135" y="363.5" width="104" height="30"/>
-                                <state key="normal" title="Use Biometrics"/>
-                                <connections>
-                                    <segue destination="CSp-99-GMQ" kind="show" id="qZL-0H-4FD"/>
+                                    <action selector="logInButtonClicked:" destination="Z7c-8B-Q0H" eventType="touchUpInside" id="0fr-Yw-feZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Yif-Sq-VOd" firstAttribute="centerX" secondItem="cUv-oy-6Fa" secondAttribute="centerX" id="2SB-83-Ukn"/>
-                            <constraint firstItem="y3o-2x-VOu" firstAttribute="centerX" secondItem="cUv-oy-6Fa" secondAttribute="centerX" id="4ZL-IX-hOm"/>
-                            <constraint firstItem="y3o-2x-VOu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dkO-1d-WUI" secondAttribute="leading" constant="20" id="9im-6c-Van"/>
                             <constraint firstItem="Yif-Sq-VOd" firstAttribute="centerY" secondItem="cUv-oy-6Fa" secondAttribute="centerY" id="KDB-xK-eeg"/>
-                            <constraint firstItem="Yif-Sq-VOd" firstAttribute="top" secondItem="y3o-2x-VOu" secondAttribute="bottom" constant="20" id="KPP-Qf-HM5"/>
-                            <constraint firstItem="dkO-1d-WUI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y3o-2x-VOu" secondAttribute="trailing" constant="20" id="PIa-45-PdF"/>
-                            <constraint firstItem="M7d-Qb-6ZD" firstAttribute="top" secondItem="Yif-Sq-VOd" secondAttribute="bottom" constant="15" id="XTJ-B8-vyM"/>
-                            <constraint firstItem="M7d-Qb-6ZD" firstAttribute="centerX" secondItem="cUv-oy-6Fa" secondAttribute="centerX" id="bta-bD-BUn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dkO-1d-WUI"/>
                     </view>
@@ -76,22 +57,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdt-Ya-bFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94" y="-51"/>
-        </scene>
-        <!--UseEmailPasswordVC-->
-        <scene sceneID="yk3-tu-3Rq">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="UseEmailPasswordVC" id="eLN-y4-z1f" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ca7-yC-VKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="654" y="-126"/>
-        </scene>
-        <!--UseBiometricsVC-->
-        <scene sceneID="mL0-TF-WEF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="UseBiometricsVC" id="CSp-99-GMQ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsn-7X-B32" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="633" y="25"/>
         </scene>
     </scenes>
 </document>
