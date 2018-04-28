@@ -89,5 +89,20 @@
             </objects>
             <point key="canvasLocation" x="-157.59999999999999" y="-402.54872563718146"/>
         </scene>
+        <!--Use Biometrics View Controller-->
+        <scene sceneID="QyH-HB-4od">
+            <objects>
+                <viewController storyboardIdentifier="UseBiometricsVC" id="tch-Wl-NuO" customClass="UseBiometricsViewController" customModule="BiometricLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mPq-FS-VZi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VGE-cq-ZPs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Oq-nL-6af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-158" y="306"/>
+        </scene>
     </scenes>
 </document>

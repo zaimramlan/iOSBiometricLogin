@@ -50,6 +50,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-Qb-6ZD">
+                                <rect key="frame" x="135" y="363.5" width="104" height="30"/>
+                                <state key="normal" title="Use Biometrics"/>
+                                <connections>
+                                    <segue destination="CSp-99-GMQ" kind="show" id="qZL-0H-4FD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -59,6 +66,8 @@
                             <constraint firstItem="Yif-Sq-VOd" firstAttribute="centerY" secondItem="cUv-oy-6Fa" secondAttribute="centerY" id="KDB-xK-eeg"/>
                             <constraint firstItem="Yif-Sq-VOd" firstAttribute="top" secondItem="y3o-2x-VOu" secondAttribute="bottom" constant="20" id="KPP-Qf-HM5"/>
                             <constraint firstItem="dkO-1d-WUI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y3o-2x-VOu" secondAttribute="trailing" constant="20" id="PIa-45-PdF"/>
+                            <constraint firstItem="M7d-Qb-6ZD" firstAttribute="top" secondItem="Yif-Sq-VOd" secondAttribute="bottom" constant="15" id="XTJ-B8-vyM"/>
+                            <constraint firstItem="M7d-Qb-6ZD" firstAttribute="centerX" secondItem="cUv-oy-6Fa" secondAttribute="centerX" id="bta-bD-BUn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dkO-1d-WUI"/>
                     </view>
@@ -74,7 +83,15 @@
                 <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="UseEmailPasswordVC" id="eLN-y4-z1f" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ca7-yC-VKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="-52"/>
+            <point key="canvasLocation" x="632" y="-130"/>
+        </scene>
+        <!--UseBiometricsVC-->
+        <scene sceneID="mL0-TF-WEF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="UseBiometricsVC" id="CSp-99-GMQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsn-7X-B32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="25"/>
         </scene>
     </scenes>
 </document>
