@@ -66,6 +66,18 @@
 		A4BF9B70209089830039F51D /* BiometricLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BF9B6F209089830039F51D /* BiometricLoginTests.swift */; };
 		A4DBAED12094BBDC003E6DD0 /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED02094BBDC003E6DD0 /* KeychainConstants.swift */; };
 		A4DBAED22094BBDC003E6DD0 /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED02094BBDC003E6DD0 /* KeychainConstants.swift */; };
+		A4DBAEDA2094C68C003E6DD0 /* WelcomeUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED42094C68C003E6DD0 /* WelcomeUserPresenter.swift */; };
+		A4DBAEDB2094C68C003E6DD0 /* WelcomeUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED42094C68C003E6DD0 /* WelcomeUserPresenter.swift */; };
+		A4DBAEDC2094C68C003E6DD0 /* WelcomeUserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED52094C68C003E6DD0 /* WelcomeUserWorker.swift */; };
+		A4DBAEDD2094C68C003E6DD0 /* WelcomeUserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED52094C68C003E6DD0 /* WelcomeUserWorker.swift */; };
+		A4DBAEDE2094C68C003E6DD0 /* WelcomeUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED62094C68C003E6DD0 /* WelcomeUserRouter.swift */; };
+		A4DBAEDF2094C68C003E6DD0 /* WelcomeUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED62094C68C003E6DD0 /* WelcomeUserRouter.swift */; };
+		A4DBAEE02094C68C003E6DD0 /* WelcomeUserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED72094C68C003E6DD0 /* WelcomeUserModels.swift */; };
+		A4DBAEE12094C68C003E6DD0 /* WelcomeUserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED72094C68C003E6DD0 /* WelcomeUserModels.swift */; };
+		A4DBAEE22094C68C003E6DD0 /* WelcomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED82094C68C003E6DD0 /* WelcomeUserViewController.swift */; };
+		A4DBAEE32094C68C003E6DD0 /* WelcomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED82094C68C003E6DD0 /* WelcomeUserViewController.swift */; };
+		A4DBAEE42094C68C003E6DD0 /* WelcomeUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED92094C68C003E6DD0 /* WelcomeUserInteractor.swift */; };
+		A4DBAEE52094C68C003E6DD0 /* WelcomeUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DBAED92094C68C003E6DD0 /* WelcomeUserInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +130,12 @@
 		A4BF9B6F209089830039F51D /* BiometricLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLoginTests.swift; sourceTree = "<group>"; };
 		A4BF9B71209089830039F51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4DBAED02094BBDC003E6DD0 /* KeychainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
+		A4DBAED42094C68C003E6DD0 /* WelcomeUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserPresenter.swift; sourceTree = "<group>"; };
+		A4DBAED52094C68C003E6DD0 /* WelcomeUserWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserWorker.swift; sourceTree = "<group>"; };
+		A4DBAED62094C68C003E6DD0 /* WelcomeUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserRouter.swift; sourceTree = "<group>"; };
+		A4DBAED72094C68C003E6DD0 /* WelcomeUserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserModels.swift; sourceTree = "<group>"; };
+		A4DBAED82094C68C003E6DD0 /* WelcomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserViewController.swift; sourceTree = "<group>"; };
+		A4DBAED92094C68C003E6DD0 /* WelcomeUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUserInteractor.swift; sourceTree = "<group>"; };
 		A6AD620E8CB0BA70C8B44992 /* Pods-BiometricLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiometricLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BiometricLoginTests/Pods-BiometricLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF4E86C7050F11D616256704 /* Pods_BiometricLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiometricLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +205,7 @@
 		A4B1075D20908A3800FFFB85 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A4DBAED32094C676003E6DD0 /* WelcomeUser */,
 				A4BF9B5A209089830039F51D /* AppDelegate.swift */,
 				A4BF9B5E209089830039F51D /* Main.storyboard */,
 				A4BF9B63209089830039F51D /* LaunchScreen.storyboard */,
@@ -330,6 +349,19 @@
 				A4BF9B71209089830039F51D /* Info.plist */,
 			);
 			path = BiometricLoginTests;
+			sourceTree = "<group>";
+		};
+		A4DBAED32094C676003E6DD0 /* WelcomeUser */ = {
+			isa = PBXGroup;
+			children = (
+				A4DBAED42094C68C003E6DD0 /* WelcomeUserPresenter.swift */,
+				A4DBAED52094C68C003E6DD0 /* WelcomeUserWorker.swift */,
+				A4DBAED62094C68C003E6DD0 /* WelcomeUserRouter.swift */,
+				A4DBAED72094C68C003E6DD0 /* WelcomeUserModels.swift */,
+				A4DBAED82094C68C003E6DD0 /* WelcomeUserViewController.swift */,
+				A4DBAED92094C68C003E6DD0 /* WelcomeUserInteractor.swift */,
+			);
+			path = WelcomeUser;
 			sourceTree = "<group>";
 		};
 		E4F20FA9BA4BAFA0842860A4 /* Frameworks */ = {
@@ -558,14 +590,18 @@
 			files = (
 				A4BF7FE820949463009B959A /* DashboardHomePresenter.swift in Sources */,
 				A4149A742090FC3300751B72 /* UseBiometricsModels.swift in Sources */,
+				A4DBAEDE2094C68C003E6DD0 /* WelcomeUserRouter.swift in Sources */,
 				A4149A782090FC3300751B72 /* UseBiometricsInteractor.swift in Sources */,
 				A4BF7FF020949463009B959A /* DashboardHomeViewController.swift in Sources */,
 				A4149A7C20916ED000751B72 /* BiometricsWorker.swift in Sources */,
+				A4DBAEE42094C68C003E6DD0 /* WelcomeUserInteractor.swift in Sources */,
+				A4DBAEE22094C68C003E6DD0 /* WelcomeUserViewController.swift in Sources */,
 				A4DBAED12094BBDC003E6DD0 /* KeychainConstants.swift in Sources */,
 				A4B107A52090E4DD00FFFB85 /* UIActivityIndicatorView+Animations.swift in Sources */,
 				A4BF7FEC20949463009B959A /* DashboardHomeRouter.swift in Sources */,
 				A4149A722090FC3300751B72 /* UseBiometricsRouter.swift in Sources */,
 				A4BF7FEE20949463009B959A /* DashboardHomeModels.swift in Sources */,
+				A4DBAEDC2094C68C003E6DD0 /* WelcomeUserWorker.swift in Sources */,
 				A4B1079A20908EDB00FFFB85 /* UseEmailPasswordModels.swift in Sources */,
 				A4149A762090FC3300751B72 /* UseBiometricsViewController.swift in Sources */,
 				A4B1079E20908EDB00FFFB85 /* UseEmailPasswordInteractor.swift in Sources */,
@@ -580,6 +616,8 @@
 				A4BF7FF220949463009B959A /* DashboardHomeInteractor.swift in Sources */,
 				A4BF7FDB2093F90A009B959A /* IBConstants.swift in Sources */,
 				A4BF9B5B209089830039F51D /* AppDelegate.swift in Sources */,
+				A4DBAEE02094C68C003E6DD0 /* WelcomeUserModels.swift in Sources */,
+				A4DBAEDA2094C68C003E6DD0 /* WelcomeUserPresenter.swift in Sources */,
 				A4BF7FEA20949463009B959A /* DashboardHomeWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,14 +628,18 @@
 			files = (
 				A4BF7FE920949463009B959A /* DashboardHomePresenter.swift in Sources */,
 				A4149A752090FC3300751B72 /* UseBiometricsModels.swift in Sources */,
+				A4DBAEDF2094C68C003E6DD0 /* WelcomeUserRouter.swift in Sources */,
 				A4149A792090FC3300751B72 /* UseBiometricsInteractor.swift in Sources */,
 				A4BF7FF120949463009B959A /* DashboardHomeViewController.swift in Sources */,
 				A4149A7D20916ED000751B72 /* BiometricsWorker.swift in Sources */,
+				A4DBAEE52094C68C003E6DD0 /* WelcomeUserInteractor.swift in Sources */,
+				A4DBAEE32094C68C003E6DD0 /* WelcomeUserViewController.swift in Sources */,
 				A4DBAED22094BBDC003E6DD0 /* KeychainConstants.swift in Sources */,
 				A4B107A62090E4DD00FFFB85 /* UIActivityIndicatorView+Animations.swift in Sources */,
 				A4BF7FED20949463009B959A /* DashboardHomeRouter.swift in Sources */,
 				A4149A732090FC3300751B72 /* UseBiometricsRouter.swift in Sources */,
 				A4BF7FEF20949463009B959A /* DashboardHomeModels.swift in Sources */,
+				A4DBAEDD2094C68C003E6DD0 /* WelcomeUserWorker.swift in Sources */,
 				A4B1079B20908EDB00FFFB85 /* UseEmailPasswordModels.swift in Sources */,
 				A4149A772090FC3300751B72 /* UseBiometricsViewController.swift in Sources */,
 				A4B1079F20908EDB00FFFB85 /* UseEmailPasswordInteractor.swift in Sources */,
@@ -612,6 +654,8 @@
 				A4BF7FF320949463009B959A /* DashboardHomeInteractor.swift in Sources */,
 				A4BF7FDC2093F90A009B959A /* IBConstants.swift in Sources */,
 				A4BF9B70209089830039F51D /* BiometricLoginTests.swift in Sources */,
+				A4DBAEE12094C68C003E6DD0 /* WelcomeUserModels.swift in Sources */,
+				A4DBAEDB2094C68C003E6DD0 /* WelcomeUserPresenter.swift in Sources */,
 				A4BF7FEB20949463009B959A /* DashboardHomeWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

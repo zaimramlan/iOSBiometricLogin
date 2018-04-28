@@ -55,21 +55,25 @@ class UseBiometricsViewController: UIViewController, UseBiometricsDisplayLogic {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    useBiometrics()
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    useBiometrics()
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    if hasTriedUsingBiometrics { router?.routeToBack() }
   }
 
   // MARK: Use Case - Use Biometrics
   
+  var hasTriedUsingBiometrics = false
   func useBiometrics() {
     let request = UseBiometricsModels.UseBiometrics.Request()
     interactor?.UseBiometrics(with: request)
   }
 
-  func displayUseBiometricsResult(with viewModel: UseBiometricsModels.UseBiometrics.ViewModel) {    
+  func displayUseBiometricsResult(with viewModel: UseBiometricsModels.UseBiometrics.ViewModel) {
+    hasTriedUsingBiometrics = true
+    
     switch viewModel.result {
     case .success:
       router?.routeToDashboard()

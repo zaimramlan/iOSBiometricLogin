@@ -132,7 +132,7 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
       showFailureResultLabel()
     }
     else {
-      showSuccessResultLabel()
+      router?.routeToDashboard()
     }
   }
 }

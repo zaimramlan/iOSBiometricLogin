@@ -13,6 +13,7 @@
 import UIKit
 
 protocol UseEmailPasswordRoutingLogic {
+  func routeToDashboard()
 }
 
 protocol UseEmailPasswordDataPassing {
@@ -24,4 +25,9 @@ class UseEmailPasswordRouter: NSObject, UseEmailPasswordRoutingLogic, UseEmailPa
   var dataStore: UseEmailPasswordDataStore?
   
   // MARK: Routing
+  
+  func routeToDashboard() {
+    guard let destinationVC = UIStoryboard(name: IBConstants.Storyboard.Dashboard, bundle: nil).instantiateInitialViewController() else { return }
+    viewController?.navigationController?.present(destinationVC, animated: true, completion: nil)
+  }
 }
