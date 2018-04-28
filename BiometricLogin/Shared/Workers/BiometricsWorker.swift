@@ -14,7 +14,7 @@ class BiometricsWorker {
   // MARK: Enums
   
   enum AuthenticationResult {
-    case success, error
+    case success, error, cancel
   }
   
   // MARK: Main Function
@@ -41,8 +41,9 @@ class BiometricsWorker {
           }
           else {
             guard let error = authenticationError as NSError? else { return }
-            print(error.code)
-            completion(.error, error)
+            
+            let result = self.handleEvaluatePolicyError(code: error.code)
+            completion(result, error)
           }
         }
       })
@@ -51,8 +52,9 @@ class BiometricsWorker {
     // device doesn't support
     else {
       guard let error = capibilityError else { return }
-      print(error.code)
-      completion(.error, error)
+      
+      let result = handleEvaluatePolicyError(code: error.code)
+      completion(result, error)
     }
   }
 }
@@ -60,14 +62,22 @@ class BiometricsWorker {
 // MARK: Private Helpers
 
 private extension BiometricsWorker {
+  
+  // TODO: Add more error cases
 
   /// Handle error codes returned by evaluatePolicy
-  func handleEvaluatePolicyError(code: Int) {
-    
+  func handleEvaluatePolicyError(code: Int) -> AuthenticationResult {
+    switch code {
+    case LAError.userCancel.rawValue:
+      return .cancel
+      
+    default:
+      return handleCanEvaluatePolicyError(code: code)
+    }
   }
   
   /// Handle error codes returned by canEvaluatePolicy
-  func handleCanEvaluatePolicyError(code: Int) {
-    
+  func handleCanEvaluatePolicyError(code: Int) -> AuthenticationResult {
+    return .error
   }
 }

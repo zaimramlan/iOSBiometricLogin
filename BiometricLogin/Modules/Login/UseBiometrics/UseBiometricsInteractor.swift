@@ -26,13 +26,8 @@ class UseBiometricsInteractor: UseBiometricsBusinessLogic, UseBiometricsDataStor
   // MARK: Use Case - Use Biometrics
   
   func UseBiometrics(with request: UseBiometricsModels.UseBiometrics.Request) {
-    worker?.authenticate(completion: { [weak self] (result, error) in
-      var isSuccessful = false
-      if result == .success {
-        isSuccessful = true
-      }
-      
-      let response = UseBiometricsModels.UseBiometrics.Response(isSuccessful: isSuccessful)
+    worker?.authenticate(completion: { [weak self] (result, error) in      
+      let response = UseBiometricsModels.UseBiometrics.Response(result: result)
       self?.presenter?.presentUseBiometricsResult(with: response)
     })
   }

@@ -22,7 +22,7 @@ class UseBiometricsPresenter: UseBiometricsPresentationLogic {
   // MARK: Use Case - UseBiometrics
   
   func presentUseBiometricsResult(with response: UseBiometricsModels.UseBiometrics.Response) {
-    let viewModel = UseBiometricsModels.UseBiometrics.ViewModel(isSuccessful: response.isSuccessful)
+    let viewModel = UseBiometricsModels.UseBiometrics.ViewModel(result: response.result)
     viewController?.displayUseBiometricsResult(with: viewModel)
   }
 }

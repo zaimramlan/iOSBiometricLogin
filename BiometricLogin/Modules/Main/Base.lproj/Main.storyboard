@@ -83,7 +83,7 @@
                 <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="UseEmailPasswordVC" id="eLN-y4-z1f" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ca7-yC-VKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="-130"/>
+            <point key="canvasLocation" x="654" y="-126"/>
         </scene>
         <!--UseBiometricsVC-->
         <scene sceneID="mL0-TF-WEF">

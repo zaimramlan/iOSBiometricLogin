@@ -21,11 +21,11 @@ enum UseBiometricsModels {
     }
 
     struct Response {
-      var isSuccessful: Bool
+      var result: BiometricsWorker.AuthenticationResult
     }
 
     struct ViewModel {
-      var isSuccessful: Bool
+      var result: BiometricsWorker.AuthenticationResult
     }
   }
 }

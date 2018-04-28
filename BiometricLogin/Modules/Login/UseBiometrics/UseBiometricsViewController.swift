@@ -69,11 +69,15 @@ class UseBiometricsViewController: UIViewController, UseBiometricsDisplayLogic {
     interactor?.UseBiometrics(with: request)
   }
 
-  func displayUseBiometricsResult(with viewModel: UseBiometricsModels.UseBiometrics.ViewModel) {
-    if viewModel.isSuccessful {
-      print("Success!")
-    }
-    else {
+  func displayUseBiometricsResult(with viewModel: UseBiometricsModels.UseBiometrics.ViewModel) {    
+    switch viewModel.result {
+    case .success:
+      print("success")
+      
+    case .cancel:
+      router?.routeToBack()
+      
+    case .error:
       router?.routeToUseEmailPassword()
     }
   }
