@@ -16,34 +16,35 @@ class BiometricsWorker {
   enum AuthenticationResult {
     case success, error, cancel
   }
+
+  // MARK: Properties
+  
+  var context = LAContext()
+  let BiometryType = LABiometryType.self
   
   // MARK: Main Function
   
-  func authenticate(completion: @escaping ((_ result: AuthenticationResult, _ error: NSError?) -> Void)) {
-    let context = LAContext()
+  func authenticate(completion: @escaping ((_ result: AuthenticationResult, _ error: NSError?, _ biometricsType: LABiometryType?) -> Void)) {
     context.localizedFallbackTitle = "Use Email & Password"
     context.localizedCancelTitle = "Cancel"
     
     var capibilityError: NSError?
     let authenticationReason = "For faster login ;)"
     
-    // check if device supports
+    // check if device supports & can authenticate
     if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &capibilityError) {
       
-      // check if can authenticate
-      context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: authenticationReason, reply: {
-        (success, authenticationError) in
-        
-        // ensure UI-related work is done on the main thread
+      context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: authenticationReason, reply: { [unowned self] (success, authenticationError) in
+
         DispatchQueue.main.async {
           if success {
-            completion(.success, nil)
+            completion(.success, nil, self.context.biometryType)
           }
           else {
             guard let error = authenticationError as NSError? else { return }
             
             let result = self.handleEvaluatePolicyError(code: error.code)
-            completion(result, error)
+            completion(result, error, nil)
           }
         }
       })
@@ -54,7 +55,7 @@ class BiometricsWorker {
       guard let error = capibilityError else { return }
       
       let result = handleEvaluatePolicyError(code: error.code)
-      completion(result, error)
+      completion(result, error, nil)
     }
   }
 }

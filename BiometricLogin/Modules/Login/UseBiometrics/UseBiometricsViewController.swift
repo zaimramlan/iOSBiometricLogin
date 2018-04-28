@@ -72,7 +72,7 @@ class UseBiometricsViewController: UIViewController, UseBiometricsDisplayLogic {
   func displayUseBiometricsResult(with viewModel: UseBiometricsModels.UseBiometrics.ViewModel) {    
     switch viewModel.result {
     case .success:
-      print("success")
+      router?.routeToDashboard()
       
     case .cancel:
       router?.routeToBack()

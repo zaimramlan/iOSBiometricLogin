@@ -7,50 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06F3E4CCDB525708ED2168A20E79966C /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A3817E35E45B79E1D8982A19F69A25 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E471533235A1255F9C894551DC2BEC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		78CF754DA8506B3A0C101E57AB489088 /* Pods-BiometricLogin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C14ED878BA4255F7176BED3EC397BAF /* Pods-BiometricLogin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFE451D743A63E959636B7035D1F6106 /* Pods-BiometricLogin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A130EEEF8B5433FA7DA60232399A5 /* Pods-BiometricLogin-dummy.m */; };
+		3078FC4720875CEDE498EC8E34468732 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */; };
+		482E9C243EF3D2412C179D79EDBECBAE /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */; };
+		77880A9B160765C9EE5F0BDCF7F5C08E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9DABC9EFB1A02E90930AB0D8555ADDC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B8199954017D43709FE949660D5D5471 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFB4B5FC151EA4B405A1CFE461260F15 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46048A65E739B3EE90761329C3604475 /* SwiftKeychainWrapper-dummy.m */; };
+		C46721115B5F0124D81C20FD9CFCBF3E /* Pods-BiometricLogin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C14ED878BA4255F7176BED3EC397BAF /* Pods-BiometricLogin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF088437A9FE5082152096C701E3CE5C /* Pods-BiometricLogin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A130EEEF8B5433FA7DA60232399A5 /* Pods-BiometricLogin-dummy.m */; };
 		E4AD11E696389CEC60BDC3B2735E963A /* Pods-BiometricLoginTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AED2DBE5F9B33CD64A9DFD48FFCAD5E /* Pods-BiometricLoginTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F561CAAE307CED95C6C5562C3014ADA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F758BD23C7FE4E80FCF22AB991F8CBDA /* Pods-BiometricLoginTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE93102BD5A95F8CB47B4FA8D8E43B /* Pods-BiometricLoginTests-dummy.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46904E1C257F16068BE149FFC735100F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D588FBE928124706E55E34135B11491A;
+			remoteInfo = SwiftKeychainWrapper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		025940B5CB0CF23711BC0357C5597BAF /* Pods-BiometricLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BiometricLogin.release.xcconfig"; sourceTree = "<group>"; };
 		0B1348B9281913E5D699E42724B2E1CE /* Pods-BiometricLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BiometricLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		11ECC35189BDC934EC8C660258B945D6 /* Pods-BiometricLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BiometricLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		18AA3B09C9566D69297C8FB5EB326932 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
 		21C36CB2212BA86F92F426EC22D7843B /* Pods-BiometricLogin-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BiometricLogin-frameworks.sh"; sourceTree = "<group>"; };
+		2269EA45D1597DD0CE6660AFCE57F0B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		261F5CA3C18B778FFF4AAD3480A5C30B /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2894F76B378347729828C8BC515FC39B /* Pods-BiometricLoginTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BiometricLoginTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2E8E455280924B8D01839CB82577578F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		359918E3266E1732C992EEC4F4F89A7E /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
+		42C4EF419B0C8170C9E0DC70EDAFD00B /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
+		46048A65E739B3EE90761329C3604475 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
 		460EFC187F5938223B0C03502554F2FF /* Pods-BiometricLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BiometricLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C1A130EEEF8B5433FA7DA60232399A5 /* Pods-BiometricLogin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BiometricLogin-dummy.m"; sourceTree = "<group>"; };
 		4C1CE5D25F296B2137D261B4FBA6AB9A /* Pods-BiometricLoginTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BiometricLoginTests-frameworks.sh"; sourceTree = "<group>"; };
-		551717C39261FAFC09623C4E22134C46 /* Pods_BiometricLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BiometricLogin.framework; path = "Pods-BiometricLogin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		5C14ED878BA4255F7176BED3EC397BAF /* Pods-BiometricLogin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BiometricLogin-umbrella.h"; sourceTree = "<group>"; };
 		6307B2E78148AE0611EBDBE561E98D92 /* Pods-BiometricLogin-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BiometricLogin-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		683859EEB17F7157D818728A8B063697 /* Pods-BiometricLoginTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BiometricLoginTests-resources.sh"; sourceTree = "<group>"; };
 		69462FAC900F2D95FCE44FFD2280EF29 /* Pods-BiometricLogin-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BiometricLogin-acknowledgements.markdown"; sourceTree = "<group>"; };
 		71DE93102BD5A95F8CB47B4FA8D8E43B /* Pods-BiometricLoginTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BiometricLoginTests-dummy.m"; sourceTree = "<group>"; };
+		78A3817E35E45B79E1D8982A19F69A25 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
 		8AED2DBE5F9B33CD64A9DFD48FFCAD5E /* Pods-BiometricLoginTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BiometricLoginTests-umbrella.h"; sourceTree = "<group>"; };
 		8D1CE53AD7F0C6E310313A76BB0DC963 /* Pods-BiometricLogin-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BiometricLogin-acknowledgements.plist"; sourceTree = "<group>"; };
 		8F437546D7E4EAAEBFF27A1B28FACF4E /* Pods-BiometricLoginTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BiometricLoginTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A78B19CFA41E87DFC55D85BB0F78FA7F /* Pods-BiometricLoginTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BiometricLoginTests.modulemap"; sourceTree = "<group>"; };
+		B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
+		DE07F222E596463D54EDB99566A6D00D /* Pods_BiometricLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BiometricLoginTests.framework; path = "Pods-BiometricLoginTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33BB84611CC706280BF029B768240D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5193650C6BCBB59143921FF3CFE7C29 /* Pods-BiometricLogin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BiometricLogin.modulemap"; sourceTree = "<group>"; };
-		F95CDDDEC90FF089176436428E6A4F0C /* Pods_BiometricLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BiometricLoginTests.framework; path = "Pods-BiometricLoginTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F99DD8FE535A1A31DA70E7E4684E0484 /* Pods_BiometricLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BiometricLogin.framework; path = "Pods-BiometricLogin.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		45C4CDC2681E9A6ECB7F071CA564C74F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F561CAAE307CED95C6C5562C3014ADA2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9E3A500C5D7270C9F91DCFE308D39E27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,17 +77,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C82D289F29D2290603AE774A7E7B434A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DABC9EFB1A02E90930AB0D8555ADDC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34A8FF52E9CDAED7F5E144BD0F076DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77880A9B160765C9EE5F0BDCF7F5C08E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0958F96BB3483550DA4C15FA93B8DDC9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2269EA45D1597DD0CE6660AFCE57F0B9 /* Info.plist */,
+				359918E3266E1732C992EEC4F4F89A7E /* SwiftKeychainWrapper.modulemap */,
+				18AA3B09C9566D69297C8FB5EB326932 /* SwiftKeychainWrapper.xcconfig */,
+				46048A65E739B3EE90761329C3604475 /* SwiftKeychainWrapper-dummy.m */,
+				42C4EF419B0C8170C9E0DC70EDAFD00B /* SwiftKeychainWrapper-prefix.pch */,
+				78A3817E35E45B79E1D8982A19F69A25 /* SwiftKeychainWrapper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftKeychainWrapper";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				D8F8440D9E4C8F1A0755E01C12CA2C4D /* Products */,
+				A0DC98CF63826F78B027F4AD3A6E1A4D /* Pods */,
+				BADA4D89996A6B3599D3C795310A0F07 /* Products */,
 				D46D77B1AD35DD1839BAA8661A120ADC /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A0DC98CF63826F78B027F4AD3A6E1A4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0CAC6EA9F0C2F55BADB6FB344332372 /* SwiftKeychainWrapper */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A9FC0805528B909DC5818376D82FC684 /* Pods-BiometricLoginTests */ = {
@@ -88,6 +145,28 @@
 			);
 			name = "Pods-BiometricLoginTests";
 			path = "Target Support Files/Pods-BiometricLoginTests";
+			sourceTree = "<group>";
+		};
+		B0CAC6EA9F0C2F55BADB6FB344332372 /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */,
+				D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */,
+				B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */,
+				0958F96BB3483550DA4C15FA93B8DDC9 /* Support Files */,
+			);
+			name = SwiftKeychainWrapper;
+			path = SwiftKeychainWrapper;
+			sourceTree = "<group>";
+		};
+		BADA4D89996A6B3599D3C795310A0F07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F99DD8FE535A1A31DA70E7E4684E0484 /* Pods_BiometricLogin.framework */,
+				DE07F222E596463D54EDB99566A6D00D /* Pods_BiometricLoginTests.framework */,
+				261F5CA3C18B778FFF4AAD3480A5C30B /* SwiftKeychainWrapper.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -115,15 +194,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D8F8440D9E4C8F1A0755E01C12CA2C4D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				551717C39261FAFC09623C4E22134C46 /* Pods_BiometricLogin.framework */,
-				F95CDDDEC90FF089176436428E6A4F0C /* Pods_BiometricLoginTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		DB988394D7703842DC38675777B5CC02 /* Pods-BiometricLogin */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,11 +215,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B9CE64D804AC442CDC32A1F915A3114 /* Headers */ = {
+		4A0A1CD34918360997A58527C0A8566E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78CF754DA8506B3A0C101E57AB489088 /* Pods-BiometricLogin-umbrella.h in Headers */,
+				C46721115B5F0124D81C20FD9CFCBF3E /* Pods-BiometricLogin-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +228,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4AD11E696389CEC60BDC3B2735E963A /* Pods-BiometricLoginTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4DC28CB80AAECC549437471BBE3CAA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F3E4CCDB525708ED2168A20E79966C /* SwiftKeychainWrapper-umbrella.h in Headers */,
+				B8199954017D43709FE949660D5D5471 /* SwiftKeychainWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,24 +257,42 @@
 			);
 			name = "Pods-BiometricLoginTests";
 			productName = "Pods-BiometricLoginTests";
-			productReference = F95CDDDEC90FF089176436428E6A4F0C /* Pods_BiometricLoginTests.framework */;
+			productReference = DE07F222E596463D54EDB99566A6D00D /* Pods_BiometricLoginTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C396D0DB2C8E3CD0E08D5F5FD23A3278 /* Pods-BiometricLogin */ = {
+		D588FBE928124706E55E34135B11491A /* SwiftKeychainWrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F84DE6AD82300C26D7C56FA19A434A0 /* Build configuration list for PBXNativeTarget "Pods-BiometricLogin" */;
+			buildConfigurationList = F1A1B54A67CB4A38EF719F336BD5D7C8 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
 			buildPhases = (
-				07C78B8CBC8D77A5E3F890C5A1ACD882 /* Sources */,
-				45C4CDC2681E9A6ECB7F071CA564C74F /* Frameworks */,
-				0B9CE64D804AC442CDC32A1F915A3114 /* Headers */,
+				2D941473D7A11AB564F91C02288DC26F /* Sources */,
+				D34A8FF52E9CDAED7F5E144BD0F076DD /* Frameworks */,
+				B4DC28CB80AAECC549437471BBE3CAA5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = SwiftKeychainWrapper;
+			productName = SwiftKeychainWrapper;
+			productReference = 261F5CA3C18B778FFF4AAD3480A5C30B /* SwiftKeychainWrapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D81429C9D9F4D49F23989E4056498E77 /* Pods-BiometricLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFD162D8CD0BEDEE1ED565C5BAA216EB /* Build configuration list for PBXNativeTarget "Pods-BiometricLogin" */;
+			buildPhases = (
+				A5A4E7A20915293B06E8875DC45F8BEF /* Sources */,
+				C82D289F29D2290603AE774A7E7B434A /* Frameworks */,
+				4A0A1CD34918360997A58527C0A8566E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF9293E22B93703E9C414BA7844B58E /* PBXTargetDependency */,
+			);
 			name = "Pods-BiometricLogin";
 			productName = "Pods-BiometricLogin";
-			productReference = 551717C39261FAFC09623C4E22134C46 /* Pods_BiometricLogin.framework */;
+			productReference = F99DD8FE535A1A31DA70E7E4684E0484 /* Pods_BiometricLogin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -215,12 +312,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D8F8440D9E4C8F1A0755E01C12CA2C4D /* Products */;
+			productRefGroup = BADA4D89996A6B3599D3C795310A0F07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C396D0DB2C8E3CD0E08D5F5FD23A3278 /* Pods-BiometricLogin */,
+				D81429C9D9F4D49F23989E4056498E77 /* Pods-BiometricLogin */,
 				48960CB0DFDDF957CB68AD1416DF1F7C /* Pods-BiometricLoginTests */,
+				D588FBE928124706E55E34135B11491A /* SwiftKeychainWrapper */,
 			);
 		};
 /* End PBXProject section */
@@ -234,15 +332,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07C78B8CBC8D77A5E3F890C5A1ACD882 /* Sources */ = {
+		2D941473D7A11AB564F91C02288DC26F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE451D743A63E959636B7035D1F6106 /* Pods-BiometricLogin-dummy.m in Sources */,
+				3078FC4720875CEDE498EC8E34468732 /* KeychainItemAccessibility.swift in Sources */,
+				482E9C243EF3D2412C179D79EDBECBAE /* KeychainWrapper.swift in Sources */,
+				BFB4B5FC151EA4B405A1CFE461260F15 /* SwiftKeychainWrapper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A4E7A20915293B06E8875DC45F8BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF088437A9FE5082152096C701E3CE5C /* Pods-BiometricLogin-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FF9293E22B93703E9C414BA7844B58E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftKeychainWrapper;
+			target = D588FBE928124706E55E34135B11491A /* SwiftKeychainWrapper */;
+			targetProxy = 46904E1C257F16068BE149FFC735100F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		057194B8BB9EB2BEC21238282A5A7FB9 /* Debug */ = {
@@ -335,6 +452,106 @@
 			};
 			name = Release;
 		};
+		2FE3FD26C1963BD26EFD8FF90FA9AB76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18AA3B09C9566D69297C8FB5EB326932 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41A425EC0C086AE59404B32614279FA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11ECC35189BDC934EC8C660258B945D6 /* Pods-BiometricLogin.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BiometricLogin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BiometricLogin/Pods-BiometricLogin.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BiometricLogin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		427802EE41E0DFE604F5C140DAD49142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 025940B5CB0CF23711BC0357C5597BAF /* Pods-BiometricLogin.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BiometricLogin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BiometricLogin/Pods-BiometricLogin.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BiometricLogin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7123CD6D6F17BDC2EF1714C4F2DA4EAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B1348B9281913E5D699E42724B2E1CE /* Pods-BiometricLoginTests.release.xcconfig */;
@@ -368,9 +585,9 @@
 			};
 			name = Release;
 		};
-		BC2B4D40BE3884595F37541486320E0F /* Release */ = {
+		AA0761FF78BA45901D7DD14CC4E7BE2F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 025940B5CB0CF23711BC0357C5597BAF /* Pods-BiometricLogin.release.xcconfig */;
+			baseConfigurationReference = 18AA3B09C9566D69297C8FB5EB326932 /* SwiftKeychainWrapper.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -381,52 +598,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BiometricLogin/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BiometricLogin/Pods-BiometricLogin.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BiometricLogin;
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_NAME = SwiftKeychainWrapper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BFCC74A9BB3628C56A1FF6ABF1AC9B9D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11ECC35189BDC934EC8C660258B945D6 /* Pods-BiometricLogin.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BiometricLogin/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BiometricLogin/Pods-BiometricLogin.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BiometricLogin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -508,20 +691,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F84DE6AD82300C26D7C56FA19A434A0 /* Build configuration list for PBXNativeTarget "Pods-BiometricLogin" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BFCC74A9BB3628C56A1FF6ABF1AC9B9D /* Debug */,
-				BC2B4D40BE3884595F37541486320E0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		79D961DDE0317BA3812EB350C4588D8D /* Build configuration list for PBXNativeTarget "Pods-BiometricLoginTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				057194B8BB9EB2BEC21238282A5A7FB9 /* Debug */,
 				7123CD6D6F17BDC2EF1714C4F2DA4EAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFD162D8CD0BEDEE1ED565C5BAA216EB /* Build configuration list for PBXNativeTarget "Pods-BiometricLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41A425EC0C086AE59404B32614279FA5 /* Debug */,
+				427802EE41E0DFE604F5C140DAD49142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1A1B54A67CB4A38EF719F336BD5D7C8 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0761FF78BA45901D7DD14CC4E7BE2F /* Debug */,
+				2FE3FD26C1963BD26EFD8FF90FA9AB76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

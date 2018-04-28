@@ -15,6 +15,7 @@ import UIKit
 protocol UseBiometricsRoutingLogic {
   func routeToBack()
   func routeToUseEmailPassword()
+  func routeToDashboard()
 }
 
 protocol UseBiometricsDataPassing {
@@ -32,7 +33,12 @@ class UseBiometricsRouter: NSObject, UseBiometricsRoutingLogic, UseBiometricsDat
   }
   
   func routeToUseEmailPassword() {
-    let destinationVC = UIStoryboard(name: IBConstants.Storyboard.Login, bundle: nil).instantiateViewController(withIdentifier: IBConstants.ViewController.UseEmailPassword)
+    let destinationVC = UIStoryboard(name: IBConstants.Storyboard.Login, bundle: nil).instantiateViewController(withIdentifier: IBConstants.ViewController.Login.UseEmailPassword)
     viewController?.navigationController?.pushViewController(destinationVC, animated: true)
+  }
+  
+  func routeToDashboard() {
+    guard let destinationVC = UIStoryboard(name: IBConstants.Storyboard.Dashboard, bundle: nil).instantiateInitialViewController() else { return }
+    viewController?.navigationController?.present(destinationVC, animated: true, completion: nil)
   }
 }

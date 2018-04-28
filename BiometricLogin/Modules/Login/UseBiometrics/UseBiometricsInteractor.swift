@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 protocol UseBiometricsBusinessLogic {
   func UseBiometrics(with request: UseBiometricsModels.UseBiometrics.Request)
@@ -26,7 +27,11 @@ class UseBiometricsInteractor: UseBiometricsBusinessLogic, UseBiometricsDataStor
   // MARK: Use Case - Use Biometrics
   
   func UseBiometrics(with request: UseBiometricsModels.UseBiometrics.Request) {
-    worker?.authenticate(completion: { [weak self] (result, error) in      
+    worker?.authenticate(completion: { [weak self] (result, error, biometryType) in
+      if result == .success, let type = biometryType {
+        KeychainWrapper.standard.set(type.rawValue, forKey: KeychainConstants.LocalAuthentication.type)
+      }
+      
       let response = UseBiometricsModels.UseBiometrics.Response(result: result)
       self?.presenter?.presentUseBiometricsResult(with: response)
     })
