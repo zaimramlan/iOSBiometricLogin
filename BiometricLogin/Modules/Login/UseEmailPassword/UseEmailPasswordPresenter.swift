@@ -19,7 +19,7 @@ protocol UseEmailPasswordPresentationLogic {
 class UseEmailPasswordPresenter: UseEmailPasswordPresentationLogic {
   weak var viewController: UseEmailPasswordDisplayLogic?
   
-  // MARK: Use Case - UseEmailPassword
+  // MARK: Use Case - Use Email Password
   
   func presentUseEmailPasswordResult(with response: UseEmailPasswordModels.UseEmailPassword.Response) {
     let viewModel = UseEmailPasswordModels.UseEmailPassword.ViewModel(containsErrors: response.containsErrors)

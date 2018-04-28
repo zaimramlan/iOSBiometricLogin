@@ -23,7 +23,7 @@ class UseEmailPasswordInteractor: UseEmailPasswordBusinessLogic, UseEmailPasswor
   var worker: UseEmailPasswordWorker? = UseEmailPasswordWorker()
   var presenter: UseEmailPasswordPresentationLogic?
   
-  // MARK: Use Case - UseEmailPassword
+  // MARK: Use Case - Use Email Password
   
   func UseEmailPassword(with request: UseEmailPasswordModels.UseEmailPassword.Request) {
     worker?.validate(email: request.email)

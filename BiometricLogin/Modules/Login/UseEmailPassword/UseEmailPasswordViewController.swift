@@ -107,7 +107,7 @@ class UseEmailPasswordViewController: UIViewController, UseEmailPasswordDisplayL
     showResultLabel()
   }
 
-  // MARK: Use Case - UseEmailPassword
+  // MARK: Use Case - Use Email Password
 
   @IBOutlet var emailTF: UITextField!
   @IBOutlet var passwordTF: UITextField!
